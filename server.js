@@ -123,6 +123,11 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/form-fields', formFieldRoutes);
 app.use('/api/eligibility', eligibilityRoutes); 
 
+// Test Route for deployment check
+app.get('/', (req, res) => {
+  res.send('🚀 Backend Server is Running Successfully!');
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
